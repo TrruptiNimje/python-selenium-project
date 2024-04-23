@@ -8,10 +8,7 @@ from selenium.webdriver.common.by import By
 class TestNegativeScenarios:
     @pytest.mark.negativetest
     @pytest.mark.login
-    def test_negative_username(self):
-        # Open Browser
-        driver = selenium.webdriver.Chrome()
-
+    def test_negative_username(self, driver):
         # Open Page
         driver.get("https://practicetestautomation.com/practice-test-login/")
 
@@ -38,10 +35,7 @@ class TestNegativeScenarios:
 
     @pytest.mark.negativetest
     @pytest.mark.login
-    def test_negative_password(self):
-        # Open Browser
-        driver = selenium.webdriver.Chrome()
-
+    def test_negative_password(self, driver):
         # Open Page
         driver.get("https://practicetestautomation.com/practice-test-login/")
 

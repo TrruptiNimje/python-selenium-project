@@ -7,9 +7,7 @@ from selenium.webdriver.common.by import By
 class TestPositiveScenarios:
     @pytest.mark.login
     @pytest.mark.positivetest
-    def test_positive_login(self):
-        # Open Browser
-        driver = selenium.webdriver.Chrome()
+    def test_positive_login(self, driver):
 
         # Go to webpage
         driver.get("https://practicetestautomation.com/practice-test-login/")
