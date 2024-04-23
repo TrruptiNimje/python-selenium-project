@@ -1,6 +1,6 @@
+import time
+
 import pytest
-import selenium
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 
@@ -32,6 +32,7 @@ class TestPositiveScenarios:
         text_locator = driver.find_element(By.TAG_NAME, "h1")
         actual_text = text_locator.text
         assert actual_text == "Logged In Successfully"
+        time.sleep(2)
 
         # Verify button Log out is displayed on the new page
         log_out_locator = driver.find_element(By.LINK_TEXT, "Log out")
