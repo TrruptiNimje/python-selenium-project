@@ -3,4 +3,3 @@
 - @pytest.mark.tag (tag here represents any name you wish to give to the tag for this mark) ---- this feature can be used in a scenario for example I wish to create a smoke test set or regression test set from the existing tests then tagging them with this feature will run specified tagged test only.
         -- To run the specifically tagged tests we need to create an environment by navigating to 'Edit configuration from run button dropdown' > name the test (example: smoke test) > add arguments '-m tag name', now save and run the tests using this environment.
 - 'pytest.ini' is a file we need to create to store all the customise marker tags we will use in our tests, which will then avoid giving warnings when code is run, also it is helpful for others to working on the same project to know what are the existing-customised marks created and its short description.
-- File added 
