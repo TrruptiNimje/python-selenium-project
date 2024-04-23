@@ -1,2 +1,4 @@
-# To run all the tests of a project Open terminal and just write 'pytest', and python will recognise all the test written in all the files of that project. (run pytest by navigating to the project)
-# How to run a python file from command line:  Navigate to project folder and type 'python3 file path/file name'
+- To run all the tests of a project Open the terminal and just write 'pytest', and Python will recognise all the tests written in all the files of that project. (run pytest by navigating to the project)
+- How to run a python file from the command line:  Navigate to the project folder and type 'python3 file path/file name'
+- @pytest.mark.tag (tag here represents any name you wish to give to the tag for this mark) ---- this feature can be used in a scenario for example I wish to create a smoke test set or regeression test set from the existing tests then tagging them with this feature will run specified tagged test only.
+        -- To run the specifically tagged tests we need to create an environment by navigating to 'Edit configuration from run button dropdown' > name the test (example: smoke test) > add arguments '-m tagname', now save and run the tests using this environment.
