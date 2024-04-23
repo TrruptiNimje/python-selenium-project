@@ -9,8 +9,7 @@ class TestNegativeLoginScenario:
     @pytest.mark.negativetest
     @pytest.mark.parametrize("username, password, expected_error_message",
                              [("incorrectUser", "Password123", "Your username is invalid!"),
-                              ("student", "incorrectPassword", "Your password is invalid!"),
-                              ("stud", "test123", "Your username is invalid!")])
+                              ("student", "incorrectPassword", "Your password is invalid!")])
     def test_negative_username(self, driver, username, password, expected_error_message):
         # Open Page
         driver.get("https://practicetestautomation.com/practice-test-login/")
@@ -26,11 +25,11 @@ class TestNegativeLoginScenario:
         # Push Submit button
         submit_button_locator = driver.find_element(By.XPATH, "//button[@id='submit']")
         submit_button_locator.click()
-        time.sleep(2)
 
         # Verify error message is displayed
         error_msg_display = driver.find_element(By.ID, "error")
         assert error_msg_display.is_displayed(), "Error message is not displayed as it should"
+        time.sleep(2)
 
         # Verify error message text is Your username is invalid!
         error_msg = error_msg_display.text

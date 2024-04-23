@@ -38,4 +38,3 @@ log_out_locator.click()
 
 # Close browser
 driver.close()
-
