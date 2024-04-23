@@ -1,9 +1,12 @@
+import pytest
 import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 
 class TestPositiveScenarios:
+    @pytest.mark.login
+    @pytest.mark.positivetest
     def test_positive_login(self):
         # Open Browser
         driver = selenium.webdriver.Chrome()
