@@ -13,9 +13,10 @@ def driver(request):
     print(f"Creating {browser} driver")
     if browser == "chrome":
         my_driver = selenium.webdriver.Chrome()
+        time.sleep(2)
     elif browser == "safari":
         my_driver = selenium.webdriver.Safari()
-        time.sleep(5)
+        time.sleep(2)
     else:
         raise TypeError(f"Expected 'chrome' or 'safari', but git {browser}")
     yield my_driver
