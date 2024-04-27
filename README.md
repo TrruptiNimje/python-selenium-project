@@ -6,3 +6,5 @@
 - '@pytest.fixture()' : fixtures can be used to remove duplicating/repeating test code. A method can be created with common/repeated module and then can be called as per need. 'conftest.py' is the one that works with pytest framework and all the fixtures are maintained here so the fixtures can be used project wide
         -- while writing fixtures 'yield' is used to return the value, anything written before yield statement is executed before each test, and anything written after the yield statement is executed after each test is completed.
 - 'pytest -m positivetest -n=2' this is a command to run a test from commandline using markers and parllel execution (-n=2) for cross-browser testing.
+- 'implicitly_wait(*)' is used globally to make browser wait until all the elements are found specified in test
+- while 
