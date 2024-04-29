@@ -29,7 +29,7 @@ class BasePage:
     def current_url(self) -> str:
         return self._driver.current_url
 
-    def _is_displayed(self, locator: tuple) -> bool:
+    def _is_displayed(self, locator: tuple, _) -> bool:
         try:
             return self._find(locator).is_displayed()
         except NoSuchElementException:

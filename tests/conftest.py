@@ -1,5 +1,6 @@
 import pytest
 import selenium
+from selenium import webdriver
 
 
 # @pytest.fixture(params=["chrome", "safari"])
@@ -14,7 +15,7 @@ def driver(request):
         my_driver = selenium.webdriver.Safari()
     else:
         raise TypeError(f"Expected 'chrome' or 'safari', but git {browser}")
-    # my_driver.implicitly_wait(10)
+    my_driver.implicitly_wait(10)
     yield my_driver
     print(f"Closing {browser} driver")
     my_driver.quit()
