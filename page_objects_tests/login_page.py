@@ -11,7 +11,6 @@ class LoginPage(BasePage):
     __submit_btn = (By.XPATH, "//button[@id='submit']")
     __error_msg = (By.ID, "error")
 
-
     def __init__(self, driver: WebDriver):
         super().__init__(driver)
 

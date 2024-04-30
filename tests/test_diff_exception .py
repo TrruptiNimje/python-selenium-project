@@ -1,9 +1,7 @@
-import time
-
 import pytest
+import selenium.webdriver.support.expected_conditions as ec
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
-import selenium.webdriver.support.expected_conditions as ec
 
 
 class TestException:
@@ -18,8 +16,8 @@ class TestException:
         driver.find_element(By.ID, "add_btn").click()
 
         wait = WebDriverWait(driver, 10)
-        # Verify Row 2 input field is displayed
 
+        # Verify Row 2 input field is displayed
         row_2_input_field_element = wait.until(
             ec.presence_of_element_located(
                 (By.XPATH, "//div[@id='rows']/div[3]/div[@class='row']/input[@type='text']")))
@@ -120,6 +118,6 @@ class TestException:
 
         # Verify Row 2 input field is displayed
         row_2_input_field_element = wait.until(
-            ec.visibility_of_element_located(
-                (By.XPATH, "//div[@id='rows']/div[3]/div[@class='row']/input[@type='text']")),
-            " Row 2 should be displayed but its not ")
+            ec.presence_of_element_located(
+                (By.XPATH, "//div[@id='rows']/div[3]/div[@class='row']/input[@type='text']")))
+        assert row_2_input_field_element.is_displayed(), " Row 2 should be displayed but its not "

@@ -19,4 +19,3 @@ class TestPositiveScenarios:
         assert logged_in_page.expected_url == logged_in_page.current_url, "Actual URL is not same as Expected URL"
         assert logged_in_page.header == "Logged In Successfully", "Header is not as expected"
         assert logged_in_page.is_logout_btn_displayed(), "Logout button not found"
-
